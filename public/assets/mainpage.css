@@ -1,0 +1,139 @@
+body{
+    overflow-x: hidden;
+}
+
+#heading{
+    box-sizing: border-box;
+    width: 100%;
+    text-align: center;
+}
+
+h2.title{
+    text-align: center;
+}
+
+#add_product{
+    margin: 10px;
+    padding: 9px 27px;
+    box-shadow: 0px 0px 5px 0px black;
+    border-radius: 5px;
+}
+
+#add_product div{
+    display: flex;
+    margin: 9px 3px;
+}
+#add_product div label{
+    width: 35%;
+}
+#add_product div input{
+    width: 65%;
+    align-self: flex-end;
+}
+
+#main{
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+}
+
+#product_list_wrapper{
+    width: 60%;
+    margin: 10px;
+    padding: 9px 27px;
+    box-shadow: 0px 0px 5px 0px black;
+    border-radius: 5px;
+}
+
+#product_list{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.product{
+    margin: 18px;
+    box-shadow: 0px 0px 2px 0px black;
+    padding: 9px;
+}
+
+.product img{
+    width: 230px;
+    box-shadow: 0px 0px 1px 0px black;
+}
+
+.product div{
+    padding: 9px 18px;
+}
+
+#sec_col_wrapper{
+    width: 40%;
+}
+
+#cart_wrapper{
+    margin: 10px;
+    padding: 9px 27px;
+    box-shadow: 0px 0px 5px 0px black;
+    border-radius: 5px;
+}
+
+#cart{
+    display: flex;
+    flex-direction: column;
+}
+
+.cart_item{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 9px 18px;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    box-shadow: 0px 0px 2px 0px black;
+}
+
+.cart_item img{
+    width: 100px;
+    margin-right: 10px;
+}
+
+.cart_item .space{
+    flex-grow: 1;
+}
+
+.cart_item .quantity_control{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+
+.cart_item .quantity_control .qty_plus,
+.cart_item .quantity_control .qty_minus,
+.cart_item .quantity_control .units{
+    display: inline-block;
+    width: 25px;
+    height: 20px;
+    vertical-align: middle;
+    text-align: center;
+    text-decoration: none;
+    margin-bottom: 5px;
+    border-radius: 3px;
+}
+
+.total_amount{
+    text-align: end;
+    padding: 18px;
+}
+
+button{
+    width: 90%;
+    height: 27px;
+    background-color: aliceblue;
+    border: 1px solid grey;
+    cursor: pointer;
+}
+
+.button_wrapper{
+    justify-content: space-around;
+}

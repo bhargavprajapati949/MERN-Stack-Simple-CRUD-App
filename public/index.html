@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/mainpage.css">
+    <script src="assets/jquery-3.6.0.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="heading">
+        <h1>Kabra Logitech Practical Test</h1>
+    </div>
+
+    <div id="main">
+        <div id="product_list_wrapper">
+            <h2 class="title">Products</h2>
+            <div id="product_list">
+
+            </div>
+        </div>
+        <div id="sec_col_wrapper">
+            <form id="add_product" method="POST">
+                <h2 class="title">Add Product</h2>
+                <div>
+                    <label for="pname">Name</label>
+                    <input type="text" name="product_name" id="pname">
+                </div>
+                <div>
+                    <label for="pdesc">Description</label>
+                    <input type="text" name="description" id="pdesc">
+                </div>
+                <div>
+                    <label for="pimage">Image</label>
+                    <input type="file" name="product_image" id="pimage">
+                </div>
+                <div>
+                    <label for="pqty">Quantity</label>
+                    <input type="number" name="quantity" id="pqty">
+                </div>    
+                <div>
+                    <label for="pp">Price</label>
+                    <input type="number" name="unit_price" id="pp">
+                </div>
+                <div class="button_wrapper">
+                    <button type="submit">Add Product</button>
+                </div>
+            </form>
+            <div id="cart_wrapper">
+                <h2 class="title">Cart</h2>
+                <div id="cart">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="product_temp" class="product" style="display: none;">
+        <img class="img" name="product_image" src="/media/product_image/fallback.png" alt="image">
+        <div class="name"></div>
+        <div class="desc"></div>
+        <div>Stock Left :<span class="stock_left"></span></div>
+        <div>Price : INR <span class="price"></span></div>
+        <div class="button_wrapper">
+            <button class="addProduct" onclick="addToCart(this)">Add to Cart</button>
+        </div>
+    </div>
+
+    <div id="cart_temp" class="cart_item" style="display: none;">
+        <img class="img" src="/media/product_image/fallback.png" alt="image">
+        <div class="info">
+            <div class="name">Name: </div>
+            <div class="price">Price: INR </div>
+        </div>
+        <div class="space"></div>
+        <div class="quantity_control">
+            <button class="qty_plus" onclick="updateInc(this)">+</button>
+            <div class="units"></div>
+            <button class="qty_minus" onclick="updateDec(this)"> - </button>
+        </div>
+    </div>
+
+    <div id="totalAmount" class="total_amount" style="display: none;">
+        Total Amount : <span class="amt"></span>
+    </div>
+
+
+    <script src="assets/mainpage.js"></script>
+</body>
+</html>
