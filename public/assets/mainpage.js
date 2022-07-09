@@ -87,6 +87,9 @@ $('#add_product').submit(function(e){
         success: function (data) {
             updateProducts();
             form.reset();
+            if(data.msg){
+                showNotice(data.msg);
+            }
         }
     });
 });
@@ -105,6 +108,9 @@ function addToCart(btn){
         data: data,
         success: function(res){
             updateCart();
+            if(res.msg){
+                showNotice(res.msg);
+            }
         }
     });
 }
@@ -122,8 +128,11 @@ function updateInc(btn){
         url: url,
         type: "POST",
         data: data,
-        success: function(){
+        success: function(res){
             updateCart();
+            if(res.msg){
+                showNotice(res.msg);
+            }
         }
     });
 }
@@ -142,8 +151,23 @@ function updateDec(btn){
         url: url,
         type: "POST",
         data: data,
-        success: function(){
+        success: function(res){
             updateCart();
+            if(res.msg){
+                showNotice(res.msg);
+            }
         }
     });
+}
+
+function showNotice(msg){
+    
+    const notice = $("#notice");
+
+    notice.text(msg);
+    notice.css("display", "block"); 
+    
+    setTimeout(function(){
+        $("#notice").css("display", "none");
+    }, 5000)
 }

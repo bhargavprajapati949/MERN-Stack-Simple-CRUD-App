@@ -64,9 +64,11 @@ router.post('/update', validation.updateCart, async (req, res)=>{
     //Check if Product  exist in cart before updating it
     if(await Cart.exists({product_id: req.cleanData.product_id})){
         if(req.cleanData.action == "increase"){
+            
             //check if we have quantity of product to add into cart
             const p_q_left = await Product.findOne({_id: req.cleanData.product_id})
             const c_q = await Cart.findOne({product_id: req.cleanData.product_id})
+            
             if(p_q_left['quantity'] > c_q['quantity']){
                 item = await Cart.findOneAndUpdate(
                     {product_id: req.cleanData.product_id}, 

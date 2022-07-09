@@ -10,7 +10,7 @@
 </head>
 <body>
     <div id="heading">
-        <h1>Kabra Logitech Practical Test</h1>
+        <h1>MERN Stack Simple CURD App</h1>
     </div>
 
     <div id="main">
@@ -37,11 +37,11 @@
                 </div>
                 <div>
                     <label for="pqty">Quantity</label>
-                    <input type="number" name="quantity" id="pqty">
+                    <input type="number" name="quantity" id="pqty" min="1">
                 </div>    
                 <div>
                     <label for="pp">Price</label>
-                    <input type="number" name="unit_price" id="pp">
+                    <input type="number" name="unit_price" id="pp" min="1">
                 </div>
                 <div class="button_wrapper">
                     <button type="submit">Add Product</button>
@@ -85,6 +85,9 @@
         Total Amount : <span class="amt"></span>
     </div>
 
+    <div id="notice">
+        This is notice
+    </div>
 
     <script src="assets/mainpage.js"></script>
 </body>
