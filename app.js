@@ -9,7 +9,8 @@ const dotenv = require('dotenv')
 dotenv.config()
 
 const PORT = process.env.PORT || 8000
-const DB_URL = process.env.DB_URL || "Not Found";
+//Database URL
+const DB_URL = process.env.DB_URL || "mongodb://localhost/kabra_logitech_test";
 if(DB_URL == "Not Found"){
     throw new Error("Database URL not Found")
 }

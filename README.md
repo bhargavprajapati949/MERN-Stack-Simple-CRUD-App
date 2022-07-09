@@ -12,6 +12,9 @@
 - Clone the Project in local PC
 - install dependencies
     <pre>npm install</pre>
+- Add Database URL
+    - You can add it to .env file (1st Preference)
+    - You can add it to app.js file [here](https://github.com/bhargavprajapati949/MERN-Stack-Simple-CRUD-App/blob/3727cad0070fdb0fc1df0d64ccdd3c98c5ac1c3b/app.js#L13)
 - Run development server
     <pre>npm run dev</pre>
 
