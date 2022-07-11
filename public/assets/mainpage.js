@@ -160,6 +160,8 @@ function updateDec(btn){
     });
 }
 
+let noticeCloseTimer;
+
 function showNotice(msg){
     
     const notice = $("#notice");
@@ -167,7 +169,9 @@ function showNotice(msg){
     notice.text(msg);
     notice.css("display", "block"); 
     
-    setTimeout(function(){
+    clearTimeout(noticeCloseTimer)
+
+    noticeCloseTimer = setTimeout(function(){
         $("#notice").css("display", "none");
     }, 5000)
 }
